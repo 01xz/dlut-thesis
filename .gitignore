@@ -1,0 +1,35 @@
+# LaTeX build files
+*.aux
+*.log
+*.toc
+*.out
+*.synctex.gz
+*.acn
+*.acr
+*.alg
+*.bbl
+*.blg
+*.brf
+*.glg
+*.glo
+*.gls
+*.ist
+*.lof
+*.lot
+*.maf
+*.mtc
+*.mtc1
+*.nlg
+*.nlo
+*.slg
+*.slo
+*.stg
+*.stt
+*.xdy
+*.tdo
+*.toe
+
+# Generated files
+*.dvi
+*.ps
+main.pdf
