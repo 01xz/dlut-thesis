@@ -288,7 +288,7 @@
 
 \RequirePackage{titletoc}
 \titlecontents{chapter}[0pt]{\songti\zihao{-4}}
-{\thecontentslabel\hspace{0.1\ccwd}}{}
+{\thecontentslabel\hspace{0.4\ccwd}}{}
 {\hspace{0em}\titlerule*{.}\contentspage}
 \titlecontents{section}[2\ccwd]{\songti\zihao{-4}}
 {\thecontentslabel\hspace{0.4\ccwd}}{}
@@ -304,6 +304,33 @@
 \titlecontents{table}[0pt]{\songti\zihao{-4}}
 {\tablename\thecontentslabel~~}{\hspace*{-1.5cm}}
 {\hspace{0em}\titlerule*{.}\hspace{-0.5em}\contentspage}
+
+% table of contents in Chinese
+\renewcommand\tableofcontents{%
+	\if@twocolumn
+		\@restonecoltrue\onecolumn
+	\else
+		\@restonecolfalse
+	\fi
+	\chapter*{\contentsname}
+	\addcontentsline{toc}{chapter}{目录}
+	\@mkboth{\MakeUppercase\contentsname}{\MakeUppercase\contentsname}%
+	\pdfbookmark[0]{目录}{bittoc}
+	\@starttoc{toc}%
+	\if@restonecol\twocolumn\fi
+}
+
+% table of contents in English
+\def\engcontentsname{CONTENTS}
+\renewcommand\engcontentsname{\bf\zihao{-3} \hfill TABLE OF CONTENTS \hfill}
+\newcommand\tableofengcontents{
+	\@restonecolfalse
+	\chapter*{\engcontentsname
+		\@mkboth{\engcontentsname}{\engcontentsname}}
+	\addcontentsline{toc}{chapter}{TABLE OF CONTENTS}
+	\@starttoc{toe}%
+	\if@restonecol\twocolumn\fi
+}
 
 
 %-----------------------------------------------------------------------------------------------------------------------
@@ -659,36 +686,6 @@
 
 \newcommand\englishkeywords[1]{%
 	\vspace{2ex}\indent{\bf\zihao{-4} \dlut@label@englishkeywords} #1}
-
-
-%-----------------------------------------------------------------------------------------------------------------------
-% table of contents in Chinese
-\renewcommand\tableofcontents{%
-	\if@twocolumn
-		\@restonecoltrue\onecolumn
-	\else
-		\@restonecolfalse
-	\fi
-	\chapter*{\contentsname}
-	\addcontentsline{toc}{chapter}{目录}
-	\@mkboth{\MakeUppercase\contentsname}{\MakeUppercase\contentsname}%
-	\pdfbookmark[0]{目录}{bittoc}
-	\@starttoc{toc}%
-	\if@restonecol\twocolumn\fi
-}
-
-% table of contents in English
-\def\engcontentsname{CONTENTS}
-\renewcommand\engcontentsname{\bf\zihao{-3} \hfill TABLE OF CONTENTS \hfill}
-\newcommand\tableofengcontents{
-	\@restonecolfalse
-	\chapter*{\engcontentsname
-	  \@mkboth{%
-		  \engcontentsname}{\engcontentsname}}
-	\addcontentsline{toc}{chapter}{TABLE OF CONTENTS}
-	\@starttoc{toe}%
-	\if@restonecol\twocolumn\fi
-}
 
 
 %-----------------------------------------------------------------------------------------------------------------------
