@@ -14,6 +14,7 @@
 \RequirePackage{upgreek}
 \RequirePackage[version=4]{mhchem}
 \RequirePackage{siunitx}
+\RequirePackage{pdfpages}
 \RequirePackage{ifthen}
 \RequirePackage{ifpdf}
 
