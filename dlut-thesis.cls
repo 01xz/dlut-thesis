@@ -14,6 +14,8 @@
 \RequirePackage{upgreek}
 \RequirePackage[version=4]{mhchem}
 \RequirePackage{siunitx}
+\RequirePackage{ifthen}
+\RequirePackage{ifpdf}
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{ctexbook}}
 \newif\ifdlut@istwoside\dlut@istwosidefalse
@@ -55,7 +57,7 @@
 
 
 %-----------------------------------------------------------------------------------------------------------------------
-\usepackage[CJKchecksingle,BoldFont]{xeCJK}
+\RequirePackage[CJKchecksingle,BoldFont]{xeCJK}
 
 \ProcessOptions\relax
 \ifdlut@overleaf
@@ -86,6 +88,7 @@
 \NewDocumentCommand \xingkai  {} {\CJKfamily{zhxingkai}}
 \NewDocumentCommand \xihei    {} {\CJKfamily{zhxihei}  }
 
+
 %-----------------------------------------------------------------------------------------------------------------------
 \renewcommand\contentsname{目~~录}
 \renewcommand\listfigurename{图~目~录}
@@ -106,7 +109,7 @@
 \def\dlut@label@degree{申~~~~请~~~~学~~~~位}
 \def\dlut@label@submitdate{论文提交日期}
 \def\dlut@label@defenddate{答~~辩~~日~~期：}
-\def\dlut@label@studentnumber{学~~~~~~~~~~~~~~号：}
+\def\dlut@label@studentid{学~~~~~~~~~~~~~~号：}
 \def\dlut@label@institute{学~~~~院~~~~名~~~~称}
 \def\dlut@label@school{学~位~授~予~单~位}
 \def\dlut@label@chairman{答辩委员会主席}
@@ -127,7 +130,7 @@
 \def\dlut@value@advisor{（姓名、专业技术职务、学位）}
 \def\dlut@value@advisorinstitute{（单位）}
 \def\dlut@value@major{}
-\def\dlut@value@studentnumber{}
+\def\dlut@value@studentid{}
 \def\dlut@value@submitdate{}
 \def\dlut@value@defenddate{\today}
 \def\dlut@value@institute{}
@@ -138,9 +141,9 @@
 %-----------------------------------------------------------------------------------------------------------------------
 \RequirePackage{ulem}
 \allowdisplaybreaks[4]
-\usepackage{tikz}
-\usepackage{etoolbox}
-\usepackage{pifont}
+\RequirePackage{tikz}
+\RequirePackage{etoolbox}
+\RequirePackage{pifont}
 \newcommand{\circled}[2][]{\tikz[baseline=(char.base)]
 	{\node[shape = circle, draw, inner sep = 1pt]
 		(char) {\phantom{\ifblank{#1}{#2}{#1}}};
@@ -208,7 +211,7 @@
 
 %-----------------------------------------------------------------------------------------------------------------------
 % page layout
-\usepackage[%
+\RequirePackage[%
 	paper=a4paper,%
 	top=3.5cm,%
 	bottom=2.5cm,%
@@ -264,7 +267,7 @@
 
 %-----------------------------------------------------------------------------------------------------------------------
 % subsubsection style
-\usepackage{titlesec}
+\RequirePackage{titlesec}
 \ctexset{subsubsection={
 			name = {(,)},
 			number = {\arabic{subsubsection}},
@@ -322,14 +325,8 @@
 
 
 %-----------------------------------------------------------------------------------------------------------------------
-% packages
-\RequirePackage{ifthen}
-\RequirePackage{ifpdf}
-\RequirePackage{fancyhdr}
-
-
-%-----------------------------------------------------------------------------------------------------------------------
 % settings for header and footer
+\RequirePackage{fancyhdr}
 \fancypagestyle{dlut@empty}{\fancyhf{}}
 
 \fancypagestyle{dlut@headings}{%
@@ -387,13 +384,9 @@
 \renewcommand{\proofname}{\bf 证明}
 
 \RequirePackage{xltxtra}
-
-\usepackage{setspace}
-
 \RequirePackage{graphicx}
 \RequirePackage{subfigure}
 \RequirePackage{makecell}
-
 \RequirePackage{wrapfig}
 
 
@@ -401,9 +394,9 @@
 % title settings for tables and figures
 \RequirePackage{amsmath}
 \RequirePackage{caption}
-\usepackage[list=off]{bicaption}
-\usepackage[justification=centering]{caption}
-\usepackage{booktabs}
+\RequirePackage[list=off]{bicaption}
+\RequirePackage[justification=centering]{caption}
+\RequirePackage{booktabs}
 \RequirePackage{tabularx}
 \DeclareCaptionLabelSeparator{zhspace}{\hspace{1\ccwd}}
 \DeclareCaptionFont{fontsize}{\songti\zihao{5}}
@@ -450,7 +443,7 @@
 
 %-----------------------------------------------------------------------------------------------------------------------
 \RequirePackage{xcolor}
-\usepackage{float}
+\RequirePackage{float}
 
 
 %-----------------------------------------------------------------------------------------------------------------------
@@ -460,9 +453,9 @@
 %-----------------------------------------------------------------------------------------------------------------------
 % algorithm
 \newcounter{algorithm}[chapter]
-\usepackage{algorithm}
-\usepackage{algorithmicx}
-\usepackage{algpseudocode}
+\RequirePackage{algorithm}
+\RequirePackage{algorithmicx}
+\RequirePackage{algpseudocode}
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
 \renewcommand{\algorithmicensure}{\textbf{Output:}}
 \renewcommand\thealgorithm{\thechapter.\arabic{algorithm}}
@@ -487,8 +480,8 @@
 
 %-----------------------------------------------------------------------------------------------------------------------
 % enumerate
-\usepackage{enumitem}
-\usepackage{supertabular}
+\RequirePackage{enumitem}
+\RequirePackage{supertabular}
 
 \setenumerate[1]{itemsep=0pt, partopsep=0pt, parsep=\parskip, topsep=5pt}
 
@@ -496,7 +489,7 @@
 %-----------------------------------------------------------------------------------------------------------------------
 % bible style
 \bibliographystyle{gbt7714-2005}
-\usepackage[numbers, sort&compress]{natbib}
+\RequirePackage[numbers, sort&compress]{natbib}
 
 
 %-----------------------------------------------------------------------------------------------------------------------
@@ -521,7 +514,7 @@
 %-----------------------------------------------------------------------------------------------------------------------
 % commands for title page in Chinese
 \newcommand\classification[1]{\def\dlut@value@classification{#1}}
-\newcommand\studentnumber[1]{\def\dlut@value@studentnumber{#1}}
+\newcommand\studentid[1]{\def\dlut@value@studentid{#1}}
 \newcommand\confidential[1]{\def\dlut@value@confidential{#1}}
 \newcommand\UDC[1]{\def\dlut@value@UDC{#1}}
 \newcommand\serialnumber[1]{\def\dlut@value@serialnumber{#1}}
@@ -542,7 +535,7 @@
 
 %-----------------------------------------------------------------------------------------------------------------------
 % title page in Chinese
-\renewcommand\maketitle[1]%
+\renewcommand\maketitle
 {
 	\cleardoublepage
 	\thispagestyle{empty}
@@ -563,7 +556,7 @@
 		\vspace{50.2mm}\\
 		{\songti\zihao{-3}\dlut@label@author}\dlutunderline[170pt]{\songti\zihao{-3}\dlut@value@author}
 		\vskip 10pt
-			{\songti\zihao{-3}\dlut@label@studentnumber}\dlutunderline[170pt]{\songti\zihao{-3}\dlut@value@studentnumber}
+			{\songti\zihao{-3}\dlut@label@studentid}\dlutunderline[170pt]{\songti\zihao{-3}\dlut@value@studentid}
 		\vskip 10pt
 			{\songti\zihao{-3}\dlut@label@advisor}\dlutunderline[170pt]{\songti\zihao{-3}\dlut@value@advisor}
 		\vskip 10pt
@@ -653,6 +646,7 @@
 
 \newcommand\keywords[1]{%
 	\vspace{2ex}\indent{\heiti\zihao{-4} \dlut@label@keywords} #1}
+
 
 %-----------------------------------------------------------------------------------------------------------------------
 % abstract and keywords in English
