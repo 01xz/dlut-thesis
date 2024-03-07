@@ -305,17 +305,17 @@
 
 %-----------------------------------------------------------------------------------------------------------------------
 % new commands for chapter, section, subsection
-\newcommand{\BiChapter}[2]
+\newcommand{\bichapter}[2]
 {   \chapter{#1}
 	\addcontentsline{toe}{chapter}{\protect\numberline{\csname thechapter\endcsname}#2}
 }
 
-\newcommand{\BiSection}[2]
+\newcommand{\bisection}[2]
 {   \section{#1}
 	\addcontentsline{toe}{section}{\protect\numberline{\csname thesection\endcsname}#2}
 }
 
-\newcommand{\BiSubsection}[2]
+\newcommand{\bisubsection}[2]
 {   \subsection{#1}
 	\addcontentsline{toe}{subsection}{\protect\numberline{\csname thesubsection\endcsname}#2}
 }
