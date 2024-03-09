@@ -421,7 +421,6 @@
 %-----------------------------------------------------------------------------------------------------------------------
 % title settings for tables and figures
 \RequirePackage{amsmath}
-\RequirePackage{caption}
 \RequirePackage[list=off]{bicaption}
 \RequirePackage[justification=centering]{caption}
 \RequirePackage{booktabs}
@@ -447,12 +446,6 @@
 \captionsetup[table][bi-second]{name=Tab.}
 
 \DeclareGraphicsExtensions{.pdf,.eps,.png,.jpg,.jpeg}
-
-%-----------------------------------------------------------------------------------------------------------------------
-% cite
-% sort and compress citations
-\RequirePackage[numbers,square,comma,sort&compress]{natbib}
-\newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}}
 
 
 %-----------------------------------------------------------------------------------------------------------------------
@@ -515,9 +508,9 @@
 
 
 %-----------------------------------------------------------------------------------------------------------------------
-% bible style
+% cite the reference style
+\RequirePackage[numbers,square,comma,sort&compress,super]{natbib}
 \bibliographystyle{gbt7714-2005}
-\RequirePackage[numbers, sort&compress]{natbib}
 
 
 %-----------------------------------------------------------------------------------------------------------------------
