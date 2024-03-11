@@ -1,8 +1,10 @@
 # dlut-thesis
 
-大连理工大学山寨毕业论文模版
+LaTeX Template for Master Thesis of Dalian University of Technology
 
-> 关于为什么“山寨”？
+大连理工大学硕士毕业论文LaTeX模版
+
+> why this repo?
 >
 > * 大连理工大学2024年发布了新的学位论文格式规范：
 [大连理工大学学位论文格式规范 (2024-02-26)](https://gs.dlut.edu.cn/info/1210/13916.htm)，
