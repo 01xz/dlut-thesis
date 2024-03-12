@@ -2,7 +2,7 @@
 
 LaTeX Template for Master Thesis of Dalian University of Technology
 
-大连理工大学硕士毕业论文LaTeX模版
+大连理工大学硕士学位论文LaTeX模版
 
 > why this repo?
 >
@@ -15,6 +15,12 @@ LaTeX Template for Master Thesis of Dalian University of Technology
 [大连理工大学硕士毕业论文模板 XeLaTex V1.0](https://cn.overleaf.com/latex/templates/da-lian-li-gong-da-xue-shuo-shi-bi-ye-lun-wen-mo-ban-xelatex-v1-dot-0/mswbqtxykdff)，
 难以被继续使用；
 > * 规范的制定者们对“规范”二字缺乏足够的敬意。
+
+> [!CAUTION]
+> This project is still in very early stages of development.
+
+> [!NOTE]
+> Looking for contributors and maintainers to help me with this project.
 
 此模板以“内容与样式分离”为主要目标，对原模板中不能忍受的地方大致进行了如下修改，尽可能保持与 Word 模板的视觉一致性。
 
