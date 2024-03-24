@@ -105,7 +105,7 @@
 \def\dlut@label@confidential{密级}
 \def\dlut@label@UDC{UDC\!分类号：}
 \def\dlut@label@serialnumber{编号}
-\def\dlut@label@thesis{硕士学位论文}
+\def\dlut@label@thesis{硕~~士~~学~~位~~论~~文}
 \def\dlut@label@advisor{指~~导~~教~~师：}
 \def\dlut@label@degree{申~~~~请~~~~学~~~~位}
 \def\dlut@label@submitdate{论文提交日期}
