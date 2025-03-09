@@ -1,5 +1,7 @@
 # dlut-thesis
 
+[![Maintainers Wanted](https://img.shields.io/badge/maintainers-wanted-red.svg)](https://github.com/pickhardt/maintainers-wanted)
+
 LaTeX Template for Master Thesis of Dalian University of Technology
 
 大连理工大学硕士学位论文LaTeX模版
