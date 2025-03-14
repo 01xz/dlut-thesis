@@ -6,18 +6,6 @@ LaTeX Template for Master Thesis of Dalian University of Technology
 
 大连理工大学硕士学位论文LaTeX模版
 
-> why this repo?
->
-> * 大连理工大学2024年发布了新的学位论文格式规范：
-[大连理工大学学位论文格式规范 (2024-02-26)](https://gs.dlut.edu.cn/info/1210/13916.htm)，
-其中充斥着各种自相矛盾的、冗余的设置；
-更离谱的是模板说明居然提示作者通过修改 LaTeX class 文件来补充题目、姓名、学号等信息，
-属实让人难以接受；
-> * 新的所谓“规范”的出现使得之前的一些优秀的模板，如：
-[大连理工大学硕士毕业论文模板 XeLaTex V1.0](https://cn.overleaf.com/latex/templates/da-lian-li-gong-da-xue-shuo-shi-bi-ye-lun-wen-mo-ban-xelatex-v1-dot-0/mswbqtxykdff)，
-难以被继续使用；
-> * 规范的制定者们对“规范”二字缺乏足够的敬意。
-
 > [!CAUTION]
 > This project is still in very early stages of development.
 
